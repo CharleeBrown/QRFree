@@ -11,62 +11,233 @@
 </head>
 
 <body>
-
-    <h1 style="text-align: center;">QR Code Generator</h1>
-    <div class="row">
-        <div class="col" style="text-align: center;">
-            <!-- Input field for the text to be converted to QR code -->
-            <label for="qr-text">Enter text:</label>
-            <input type="text" id="qr-text">
-            <button onclick="generateQRCode()">Generate QR Code</button>
+    <header id="topHeader">
+        <h1 style="text-align: center;">QR Code Generator</h1>
+        <div class="row">
+            <div class="col" style="text-align: center;">
+                <label for="qr-text">Enter text:</label>
+                <input type="text" id="qr-text">
+                <button onclick="generateQRCode()">Generate QR Code</button>
+            </div>
         </div>
-    </div>
-    <div class="row" style="padding-top: 40px; text-align: center;">
-        <!-- Display the generated QR code -->
-        <div id="main" class="col">
-            <div class="empty" id="qrcode" style="display: flex; align-items: center; justify-content: center;"></div>
-            <label id="labelInfo"></label>
+  
+    <div id="mainHeader">
+        <div class="row" style="padding-top: 5px; text-align: center;">
+            <div id="main" class="col d-flex flex-column align-items-center justify-content-center">
+                <div id="qrcodeMain"></div>
+                <label id="labelInfo"></label>
+            </div>
+            <div class="row" id="dividor" style="background-color:black; height:3px;"></div>
         </div>
-        
-    </div>
+        </header>
+    </header>
+        <div class="justify-content-center align-items-center" id="tableColMain">
+            <div id="tableRow" class="row">
+                <div class="col">
+                    <div class="col-sm-1">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
 
-    <script>
-        function generateQRCode() {
-            // Get the text from the input field
-            var text = document.getElementById("qr-text").value;
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
+            </div>
 
-            //Get the label 
-            var lbl = document.getElementById("labelInfo");
+            <div id="tableRow" class="row">
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
 
-            // Clear previous QR code if any
-            var code = document.getElementById("qrcode");
-			code.innerHTML = "";
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
+            </div>
+            <div id="tableRow" class="row">
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
 
-            // Generate QR code using qrcode.js library
-            var qrcode = new QRCode(code, {
-                text: text,
-                width: 150,
-                height: 150
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-sm-3">
+                        <div class="coding" id="qrcode"></div>
+                        <label class="codeLbl" id="labelInfo"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            });
-            lbl.innerHTML = text;
 
-			code.className = "full";
-        }
-    </script>
-<style>
-    #qrcode{
-        border:3px solid black;
-    }
-    #main{
-        background-color:aliceblue;
-        width:200;
-        height:300;
-    }
-    body{
-        background-color:beige
-    }
-</style>
+        <script>
+            function generateQRCode() {
+                // Get the text from the input field
+                var text = document.getElementById("qr-text").value;
+                var codes = document.getElementsByClassName("coding");
+                var labels = document.getElementsByClassName("codeLbl");
+
+                // Get the label 
+                var lbl = document.getElementById("labelInfo");
+
+
+                // Clear previous QR code if any
+                var code = document.getElementById("qrcodeMain");
+                code.innerHTML = "";
+
+                // Generate QR code using qrcode.js library
+                var qrcode = new QRCode(code, {
+                    text: text,
+                    width: 150,
+                    height: 150
+                });
+                lbl.textContent = text;
+                for (var i = 0; i < codes.length; i++) {
+                    var coder = codes[i];
+                    var lblr = labels[i];
+                    coder.innerHTML = "";
+
+                    // Generate QR code using qrcode.js library
+                    var qrcode = new QRCode(coder, {
+                        text: text,
+                        width: 150,
+                        height: 150
+                    });
+                    lblr.textContent = text;
+                }
+                // Set label content 
+
+
+            }
+        </script>
+        <style>
+            #tableColMain {
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            #qrcode {
+                width: 150px;
+                height: 150px;
+                /* Remove border */
+                border: none;
+                background-color: #fff;
+                /* Set white background */
+            }
+
+            #main {
+                background-color: aliceblue;
+                width: 100px;
+                height: 200px;
+            }
+
+            body {
+                background-color: beige
+            }
+
+            #tableRow {
+                margin-left: 20%;
+
+
+            }
+
+            .printCol {
+                display: inline;
+            }
+
+            .coding {
+                text-align: center;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 20px;
+
+            }
+
+            .codeLbl {
+                margin-bottom: 20px;
+            }
+
+
+            @media print {
+                #main {
+                    visibility: hidden;
+                }
+
+                #qrcode {
+                    visibility: visible;
+                    top: 0;
+                }
+
+                header {
+                    visibility: hidden;
+                }
+
+                #topHeader {
+                    visibility: hidden;
+                    display: none;
+                }
+
+                /* .div2 * { visibility: visible; } */
+                /* .div2 { position: absolute; top: 40px; left: 30px; } */
+                #tableRow {
+                    /* Target the content you want to print */
+                    display: inline-block;
+                    /* Ensure visibility during printing */
+                    margin: 1px;
+                    padding: 1px;
+
+                }
+
+
+            }
+        </style>
 </body>
 
 </html>
