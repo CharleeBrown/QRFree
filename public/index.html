@@ -26,12 +26,16 @@
         <div id="main" class="col">
             <div class="empty" id="qrcode" style="display: flex; align-items: center; justify-content: center;"></div>
         </div>
+        <label id="labelInfo"></label>
     </div>
 
     <script>
         function generateQRCode() {
             // Get the text from the input field
             var text = document.getElementById("qr-text").value;
+
+            //Get the label 
+            var lbl = document.getElementById("labelInfo").innerHTML;
 
             // Clear previous QR code if any
             var code = document.getElementById("qrcode");
@@ -44,6 +48,8 @@
                 height: 150
 
             });
+            lbl = text;
+
 			code.className = "full";
         }
     </script>
