@@ -35,7 +35,7 @@
             var text = document.getElementById("qr-text").value;
 
             //Get the label 
-            var lbl = document.getElementById("labelInfo").innerHTML;
+            var lbl = document.getElementById("labelInfo");
 
             // Clear previous QR code if any
             var code = document.getElementById("qrcode");
@@ -48,7 +48,7 @@
                 height: 150
 
             });
-            lbl = text;
+            lbl.innerHTML = text;
 
 			code.className = "full";
         }
