@@ -20,237 +20,283 @@
                 <button onclick="generateQRCode()">Generate QR Code</button>
             </div>
         </div>
-  
-    <div id="mainHeader">
-        <div class="row" style="padding-top: 5px; text-align: center;">
-            <div id="main" class="col d-flex flex-column align-items-center justify-content-center">
-                <div id="qrcodeMain"></div>
-                <label id="labelInfo"></label>
+
+        <div id="mainHeader">
+            <div class="row" style="padding-top: 5px; text-align: center;">
+                <div id="main" class="col d-flex flex-column align-items-center justify-content-center">
+                    <div id="qrcodeMain"></div>
+                    <label id="labelInfo"></label>
+                </div>
+                <div class="row" id="dividor" style="background-color:black; height:3px;"></div>
             </div>
-            <div class="row" id="dividor" style="background-color:black; height:3px;"></div>
-        </div>
-        </header>
     </header>
-        <div class="justify-content-center align-items-center" id="tableColMain">
-            <div id="tableRow" class="row">
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
-                    </div>
-                </div>
 
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
+    </header>
+
+
+    <div class="justify-content-center align-items-center" id="tableColMain">
+        <div id="tableRow" class="row">
+
+
+            <div class="col">
+                <div id="dataHold" class="col-sm-1">
+                    <input type="button" onclick="setQR('one');"  value="Set QR" />
+                    <div class="coding one" id="qrcode">
+                        <img src="" id="imgOne">
                     </div>
-                </div>
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
-                    </div>
+                    <label class="codeLbl" id="oneInfo"></label>
                 </div>
             </div>
 
-            <div id="tableRow" class="row">
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
+            <div class="col">
+                <div id="dataHold" class="col-sm-1">
+                    <input type="button" onclick="setQR('one');"  value="Set QR" />
+                    <div class="coding one" id="qrcode">
+                        <img src="" id="imgOne">
                     </div>
-                </div>
-
-                 <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
-                    </div>
+                    <label class="codeLbl" id="oneInfo"></label>
                 </div>
             </div>
-            <div id="tableRow" class="row">
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
+            <div class="col">
+                <div id="dataHold" class="col-sm-1">
+                    <input type="button" onclick="setQR('one');"  value="Set QR" />
+                    <div class="coding one" id="qrcode">
+                        <img src="" id="imgOne">
                     </div>
+                    <label class="codeLbl" id="oneInfo"></label>
                 </div>
+            </div>
+            
 
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
-                    </div>
+        <div id="tableRow" class="row">
+            <div class="col">
+                <div id="dataHold" class="col-sm-5">
+                    <div class="coding" id="qrcode five"></div>
+                    <label class="codeLbl" id="labelInfo fiveLbl"></label>
                 </div>
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
-                    </div>
+            </div>
+
+            <div class="col">
+                <div id="dataHold" class="col-sm-5">
+                    <div class="coding" id="qrcode six"></div>
+                    <label class="codeLbl" id="labelInfo sixLbl"></label>
                 </div>
-                <div class="col">
-                    <div id="dataHold" class="col-sm-5">
-                        <div class="coding" id="qrcode"></div>
-                        <label class="codeLbl" id="labelInfo"></label>
-                    </div>
+            </div>
+            <div class="col">
+                <div id="dataHold" class="col-sm-5">
+                    <div class="coding" id="qrcode seven"></div>
+                    <label class="codeLbl" id="labelInfo sevenLbl"></label>
+                </div>
+            </div>
+            <div class="col">
+                <div id="dataHold" class="col-sm-5">
+                    <div class="coding" id="qrcode eight"></div>
+                    <label class="codeLbl" id="labelInfo eightLbl"></label>
                 </div>
             </div>
         </div>
+        <div id="tableRow" class="row">
+            <div class="col">
+                <div id="dataHold" class="col-sm-5">
+                    <div class="coding" id="qrcode nine"></div>
+                    <label class="codeLbl" id="labelInfo nineLbl"></label>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="dataHold" class="col-sm-5">
+                    <div class="coding" id="qrcode ten"></div>
+                    <label class="codeLbl" id="labelInfo tenLbl"></label>
+                </div>
+            </div>
+            <div class="col">
+                <div id="dataHold" class="col-sm-5">
+                    <div class="coding" id="qrcode eleven"></div>
+                    <label class="codeLbl" id="labelInfo elevenLbl"></label>
+                </div>
+            </div>
+            <div class="col">
+                <div id="dataHold" class="col-sm-5">
+                    <div class="coding" id="qrcode twelve"></div>
+                    <label class="codeLbl" id="labelInfo twelveLbl"></label>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-        <script>
+    <script>
 
-            function init() {
-                // Clear forms here
-                document.getElementById("qr-text").value = "";
-            }
-            window.onload = init;
+        function init() {
+            // Clear forms here
+            document.getElementById("qr-text").value = "";
+        }
+        window.onload = init;
+        
+        
+        function setQR(setID) {
+            //var id = setID.toString();
+            var holdIMG = document.getElementById("imgOne");
+            var mainInfo = document.getElementsByTagName("img")[0];
+            var mainLbl = document.getElementById("labelInfo");
+            var imgs = document.createElement("img");
+            holdIMG.src = mainInfo.src;
+        //     if(holdimg.hasChildNodes()) {
+        //     imgs.setAttribute("class", "mainIMG");
+        //     imgs.src = mainInfo.src;
+        //     holdimg.removeChild()
+        //    }
+        //    else{
+        //     imgs.src = mainInfo.src;
+        //     holdimg.appendChild(imgs);
+        //    }
+          
+            var labels = document.getElementById("oneInfo");
+            labels.innerText = mainLbl.innerText;
+            // Get the target div element
             
-            function generateQRCode() {
-                // Get the text from the input field
-                var text = document.getElementById("qr-text").value;
-                var codes = document.getElementsByClassName("coding");
-                var labels = document.getElementsByClassName("codeLbl");
+            //codes.innerHTML = "";
+            //codes.value = mainInfo;
+            // Generate QR code using qrcode.js library
+            // var qrcode = new QRCode(codes, {
+            //     text: mainInfo,
+            //     width: 150,
+            //     height: 150
+            // });
 
-                // Get the label 
-                var lbl = document.getElementById("labelInfo");
+           
+        }
+        //document.getElementById("genButton").addEventListener("click", generateQRCode);
+        function generateQRCode() {
+            // Get the text from the input field
+            var text = document.getElementById("qr-text").value;
+            var codes = document.getElementsByClassName("coding");
+            var labels = document.getElementsByClassName("codeLbl");
 
-
-                // Clear previous QR code if any
-                var code = document.getElementById("qrcodeMain");
-                code.innerHTML = "";
-
-                // Generate QR code using qrcode.js library
-                var qrcode = new QRCode(code, {
-                    text: text,
-                    width: 150,
-                    height: 150
-                });
-                lbl.textContent = text;
-                for (var i = 0; i < codes.length; i++) {
-                    var coder = codes[i];
-                    var lblr = labels[i];
-                    coder.innerHTML = "";
-
-                    // Generate QR code using qrcode.js library
-                    var qrcode = new QRCode(coder, {
-                        text: text,
-                        width: 150,
-                        height: 150
-                    });
-                    lblr.textContent = text;
-                }
-                text = "";
-                // Set label content 
+            // Get the label 
+            var lbl = document.getElementById("labelInfo");
 
 
-            }
-        </script>
-        <style>
-            #tableColMain {
-                margin: 0 auto;
-                text-align: center;
+            // Clear previous QR code if any
+            var code = document.getElementById("qrcodeMain");
+            code.innerHTML = "";
+
+            // Generate QR code using qrcode.js library
+            var qrcode = new QRCode(code, {
+                text: text,
+                width: 150,
+                height: 150
+            });
+            lbl.textContent = text;
+            // for (var i = 0; i < codes.length; i++) {
+            //     var coder = codes[i];
+            //     var lblr = labels[i];
+            //     coder.innerHTML = "";
+
+            //     // Generate QR code using qrcode.js library
+            //     var qrcode = new QRCode(coder, {
+            //         text: text,
+            //         width: 150,
+            //         height: 150
+            //     });
+            //     lblr.textContent = text;
+            // }
+            text = "";
+            // Set label content 
+
+
+        }
+    </script>
+    <style>
+        #tableColMain {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #qrcode {
+            width: 150px;
+            height: 150px;
+            /* Remove border */
+            border: none;
+            background-color: #fff;
+            /* Set white background */
+        }
+
+        #main {
+            background-color: aliceblue;
+            width: 100px;
+            height: 200px;
+        }
+
+        body {
+            background-color: beige
+        }
+
+        #tableRow {
+            margin-left: 20%;
+
+
+        }
+
+        .printCol {
+            display: inline;
+        }
+
+        #dataHold {
+            justify-content: center;
+        }
+
+        .coding {
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+
+        }
+
+        .codeLbl {
+            margin-bottom: 20px;
+            text-align: center;
+            align-self: center;
+        }
+
+
+        @media print {
+            #main {
+                visibility: hidden;
             }
 
             #qrcode {
-                width: 150px;
-                height: 150px;
-                /* Remove border */
-                border: none;
-                background-color: #fff;
-                /* Set white background */
+                visibility: visible;
+                top: 0;
+            }
+            input{
+                visibility: hidden;
             }
 
-            #main {
-                background-color: aliceblue;
-                width: 100px;
-                height: 200px;
+            header {
+                visibility: hidden;
             }
 
-            body {
-                background-color: beige
+            #topHeader {
+                visibility: hidden;
+                display: none;
             }
 
+            /* .div2 * { visibility: visible; } */
+            /* .div2 { position: absolute; top: 40px; left: 30px; } */
             #tableRow {
-                margin-left: 20%;
-
-
-            }
-
-            .printCol {
-                display: inline;
-            }
-            
-            #dataHold{
-                justify-content: center;
-            }
-            .coding {
-                text-align: center;
-                margin-left: 10px;
-                margin-right: 10px;
-                margin-top: 20px;
+                /* Target the content you want to print */
+                display: inline-block;
+                /* Ensure visibility during printing */
+                margin: 1px;
+                padding: 1px;
 
             }
 
-            .codeLbl {
-                margin-bottom: 20px;
-                text-align: center;
-                align-self: center;
-            }
 
-
-            @media print {
-                #main {
-                    visibility: hidden;
-                }
-
-                #qrcode {
-                    visibility: visible;
-                    top: 0;
-                }
-
-                header {
-                    visibility: hidden;
-                }
-
-                #topHeader {
-                    visibility: hidden;
-                    display: none;
-                }
-
-                /* .div2 * { visibility: visible; } */
-                /* .div2 { position: absolute; top: 40px; left: 30px; } */
-                #tableRow {
-                    /* Target the content you want to print */
-                    display: inline-block;
-                    /* Ensure visibility during printing */
-                    margin: 1px;
-                    padding: 1px;
-
-                }
-
-
-            }
-        </style>
+        }
+    </style>
 </body>
 
 </html>
