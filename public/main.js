@@ -2,7 +2,7 @@ function init() {
 	// Clear forms here
 	document.getElementById("qr-text").value = "";
 }
-window.onload = init;
+
 
 
 function setQR(setID, labelID) {
@@ -55,8 +55,8 @@ function generateQRCode() {
 	// Generate QR code using qrcode.js library
 	var qrcode = new QRCode(code, {
 		text: text,
-		width: 150,
-		height: 150
+		width: 75,
+		height: 75
 	});
 	lbl.textContent = text;
 	// for (var i = 0; i < codes.length; i++) {

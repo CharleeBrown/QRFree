@@ -1,14 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
 
-
+.col{
+  width:fit-content;
+}
 #tableColMain {
-  margin: 0 auto;
-  text-align: center;
+  margin: auto 0;
+
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:black 1px solid;
 }
 
 #qrcode {
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   /* Remove border */
   border: none;
   background-color: #fff;
@@ -19,6 +29,11 @@
   background-color: aliceblue;
   width: 100px;
   height: 200px;
+}
+.p5 label{
+
+  justify-content: center;
+  align-items: center;
 }
 
 body {

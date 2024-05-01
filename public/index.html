@@ -10,9 +10,10 @@
     <link href="main.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        
 </head>
 
-<body onload="clearInfo()">
+<body onload="init()">
     <header id="topHeader">
         <h1 style="text-align: center;">QR Code Generator</h1>
         <div class="row">
@@ -34,184 +35,168 @@
     </header>
 
 
-
-    <div class="justify-content-center align-items-center" id="tableColMain">
-        <div id="tableRow" class="row">
-
-            <div class="col">
-
-                <div id="dataHold" class="col-sm-1">
-
-                    <input type="button" onclick="setQR('imgOne', 'oneInfo');" value="Set QR" />
-
-                    <div class="coding one" id="qrcode">
-                        <img src="" id="imgOne">
-                    </div>
-                    <label class="codeLbl" id="oneInfo"></label>
+<div class="container">
+    <div class="d-flex flex-column flex-wrap" id="tableColMain">
+        <div class="d-flex flex-row">
+    
+            <div class="p-5 d-flex flex-column align-items-center">
+    
+                <input type="button" onclick="setQR('imgOne', 'oneInfo');" value="Set QR" />
+    
+                <div class="coding one" id="qrcode">
+                    <img src="" id="imgOne">
                 </div>
+                <label class="codeLbl" id="oneInfo"></label>
+    
             </div>
-
-            <div class="col">
-
-                <div id="dataHold" class="col-sm-1">
-
-                    <input type="button" onclick="setQR('imgTwo', 'twoInfo');" value="Set QR" />
-
-                    <div class="coding one" id="qrcode">
-
-                        <img src="" id="imgTwo">
-                    </div>
-                    <label class="codeLbl" id="twoInfo"></label>
+    
+            <div class="p-5 d-flex flex-column align-items-center">
+    
+                <input type="button" onclick="setQR('imgTwo', 'twoInfo');" value="Set QR" />
+    
+                <div class="coding one" id="qrcode">
+    
+                    <img src="" id="imgTwo">
                 </div>
+                <label class="codeLbl" id="twoInfo"></label>
+    
             </div>
-
-            <div class="col">
-
-                <div id="dataHold" class="col-sm-1">
-
-                    <input type="button" onclick="setQR('imgThree', 'threeInfo');" value="Set QR" />
-
-                    <div class="coding one" id="qrcode">
-
-                        <img src="" id="imgThree">
-                    </div>
-
-                    <label class="codeLbl" id="threeInfo"></label>
+    
+            <div class="p-5 d-flex flex-column align-items-center">
+    
+                <input type="button" onclick="setQR('imgThree', 'threeInfo');" value="Set QR" />
+    
+                <div class="coding one" id="qrcode">
+    
+                    <img src="" id="imgThree">
                 </div>
+    
+                <label class="codeLbl" id="threeInfo"></label>
+    
             </div>
-
-
-            <div class="col">
-
-                <div id="dataHold" class="col-sm-1">
-
-                    <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
-
-                    <div class="coding one" id="qrcode">
-
-                        <img src="" id="imgFour">
-                    </div>
-
-                    <label class="codeLbl" id="fourInfo"></label>
-
+    
+    
+            <div class="p-5 d-flex flex-column align-items-center">
+    
+                <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
+    
+                <div class="coding one" id="qrcode">
+    
+                    <img src="" id="imgFour">
                 </div>
-
+    
+                <label class="codeLbl" id="fourInfo"></label>
+    
             </div>
         </div>
     
-    <div id="tableRow" class="row">
-
-        <div class="col">
-
-            <div id="dataHold" class="col-sm-1">
-
+        <div class="d-flex flex-row">
+    
+            <div class="p-5 d-flex flex-column align-items-center">
+    
                 <input type="button" onclick="setQR('imgFive', 'fiveInfo');" value="Set QR" />
-
+    
                 <div class="coding one" id="qrcode">
                     <img src="" id="imgFive">
                 </div>
                 <label class="codeLbl" id="fiveInfo"></label>
+    
             </div>
-        </div>
-
-
-
-        <div class="col">
-
-            <div id="dataHold" class="col-sm-1">
-
+    
+    
+    
+            <div class="p-5 d-flex flex-column align-items-center">
+    
+    
                 <input type="button" onclick="setQR('imgSix', 'sixInfo');" value="Set QR" />
-
+    
                 <div class="coding one" id="qrcode">
-
+    
                     <img src="" id="imgSix">
-
+    
                 </div>
-
-
+    
+    
                 <label class="codeLbl" id="sixInfo"></label>
+    
+    
             </div>
-
-        </div>
-
-
-        <div class="col">
-
-            <div id="dataHold" class="col-sm-1">
-
+    
+    
+            <div class="p-5 d-flex flex-column align-items-center">
+    
+    
                 <input type="button" onclick="setQR('imgSeven', 'sevenInfo');" value="Set QR" />
-
+    
                 <div class="coding one" id="qrcode">
-
+    
                     <img src="" id="imgSeven">
-
+    
                 </div>
-
+    
                 <label class="codeLbl" id="sevenInfo"></label>
-
+    
+    
             </div>
-
-        </div>
-        <div class="col">
-
-            <div id="dataHold" class="col-sm-1">
-
+            <div class="p-5 d-flex flex-column align-items-center">
+    
+    
                 <input type="button" onclick="setQR('imgEight', 'eightInfo');" value="Set QR" />
-
+    
                 <div class="coding one" id="qrcode">
-
+    
                     <img src="" id="imgEight">
-
+    
                 </div>
-
+    
                 <label class="codeLbl" id="eightInfo"></label>
-
+    
+    
             </div>
-
+    
         </div>
-
-    </div>
-    <div id="tableRow" class="row">
-        <div class="col">
-            <div id="dataHold" class="col-sm-1">
+        <div class="d-flex flex-row">
+            <div class="p-5 d-flex flex-column align-items-center">
+    
                 <input type="button" onclick="setQR('imgNine', 'nineInfo');" value="Set QR" />
                 <div class="coding one" id="qrcode">
                     <img src="" id="imgNine">
                 </div>
                 <label class="codeLbl" id="nineInfo"></label>
+    
             </div>
-        </div>
-
-        <div class="col">
-            <div id="dataHold" class="col-sm-1">
+    
+            <div class="p-5 d-flex flex-column align-items-center">
+    
                 <input type="button" onclick="setQR('imgTen', 'tenInfo');" value="Set QR" />
                 <div class="coding one" id="qrcode">
                     <img src="" id="imgTen">
                 </div>
                 <label class="codeLbl" id="tenInfo"></label>
+    
             </div>
-        </div>
-        <div class="col">
-            <div id="dataHold" class="col-sm-1">
+            <div class="p-5 d-flex flex-column align-items-center">
+    
                 <input type="button" onclick="setQR('imgEleven', 'elevenInfo');" value="Set QR" />
                 <div class="coding one" id="qrcode">
                     <img src="" id="imgEleven">
                 </div>
                 <label class="codeLbl" id="elevenInfo"></label>
+    
             </div>
-        </div>
-        <div class="col">
-            <div id="dataHold" class="col-sm-1">
+            <div class="p-5 d-flex flex-column align-items-center">
+    
                 <input type="button" onclick="setQR('imgTwelve', 'twelveInfo');" value="Set QR" />
                 <div class="coding one" id="qrcode">
                     <img src="" id="imgTwelve">
                 </div>
                 <label class="codeLbl" id="twelveInfo"></label>
+    
             </div>
         </div>
     </div>
+    
 </div>
-
 
 </body>
 
