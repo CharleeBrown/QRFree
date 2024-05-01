@@ -1,4 +1,4 @@
-# Basic QR Generator
+# QRFree 
+A printer-friendly QR code generation web app. It utilizes the qrcode.js API for QR creation.
 
-## This is 
-           a basic QR code generator. I had it living on my desktop, and just decided to move it to cyclic.
+Try it out here: https://qrfree.cyclic.app/
