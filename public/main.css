@@ -1,37 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
 
-body {
-  background-color: #0f2c41;
-  background-image: url("https://i.imgur.com/PFnfpkq.png");
+
+#tableColMain {
+  margin: 0 auto;
   text-align: center;
-  font-weight: 700;
 }
 
-#hello-wrapper {
-  color: #fff;
-  font-family: 'Source Sans Pro', sans-serif;
+#qrcode {
+  width: 150px;
+  height: 150px;
+  /* Remove border */
+  border: none;
+  background-color: #fff;
+  /* Set white background */
 }
 
-.typewriter {
-  border-right: solid 5px transparent;
-  white-space: nowrap;
-  overflow: hidden;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 50px;
-  animation:
-  animated-text 1.2s steps(17, end) 1s 1 normal both
+#main {
+  background-color: aliceblue;
+  width: 100px;
+  height: 200px;
 }
 
-/* text animation */
-@keyframes animated-text {
-  from {
-    width: 0;
+body {
+  background-color: beige
+}
+
+#tableRow {
+  margin-left: 20%;
+
+
+}
+
+.printCol {
+  display: inline;
+}
+
+#dataHold {
+  justify-content: center;
+}
+
+.coding {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+
+}
+
+.codeLbl {
+  margin-bottom: 20px;
+  text-align: center;
+  align-self: center;
+}
+
+
+@media print {
+  #main {
+      visibility: hidden;
   }
-  to {
-    width: 100%;
-  }
-}
 
-#particles-js {
-  height: 100vh;
+  #qrcode {
+      visibility: visible;
+      top: 0;
+  }
+
+  input {
+      visibility: hidden;
+  }
+
+  header {
+      visibility: hidden;
+  }
+
+  #topHeader {
+      visibility: hidden;
+      display: none;
+  }
+
+  /* .div2 * { visibility: visible; } */
+  /* .div2 { position: absolute; top: 40px; left: 30px; } */
+  #tableRow {
+      /* Target the content you want to print */
+      display: inline-block;
+      /* Ensure visibility during printing */
+      margin: 1px;
+      padding: 1px;
+
+  }
+
+
 }

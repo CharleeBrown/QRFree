@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="main.js"></script>
+    <link href="main.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -31,16 +33,17 @@
             </div>
     </header>
 
-    </header>
 
 
     <div class="justify-content-center align-items-center" id="tableColMain">
         <div id="tableRow" class="row">
 
-
             <div class="col">
+
                 <div id="dataHold" class="col-sm-1">
+
                     <input type="button" onclick="setQR('imgOne', 'oneInfo');" value="Set QR" />
+
                     <div class="coding one" id="qrcode">
                         <img src="" id="imgOne">
                     </div>
@@ -49,279 +52,167 @@
             </div>
 
             <div class="col">
+
                 <div id="dataHold" class="col-sm-1">
+
                     <input type="button" onclick="setQR('imgTwo', 'twoInfo');" value="Set QR" />
+
                     <div class="coding one" id="qrcode">
+
                         <img src="" id="imgTwo">
                     </div>
                     <label class="codeLbl" id="twoInfo"></label>
                 </div>
             </div>
+
             <div class="col">
+
                 <div id="dataHold" class="col-sm-1">
+
                     <input type="button" onclick="setQR('imgThree', 'threeInfo');" value="Set QR" />
+
                     <div class="coding one" id="qrcode">
+
                         <img src="" id="imgThree">
                     </div>
+
                     <label class="codeLbl" id="threeInfo"></label>
                 </div>
             </div>
 
-            <div id="tableRow" class="row">
-                <div class="col">
-                    <div id="dataHold" class="col-sm-1">
-                        <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
-                        <div class="coding one" id="qrcode">
-                            <img src="" id="imgFour">
-                        </div>
-                        <label class="codeLbl" id="fourInfo"></label>
+
+            <div class="col">
+
+                <div id="dataHold" class="col-sm-1">
+
+                    <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
+
+                    <div class="coding one" id="qrcode">
+
+                        <img src="" id="imgFour">
                     </div>
+
+                    <label class="codeLbl" id="fourInfo"></label>
+
                 </div>
 
-                <div class="col">
-                    <div id="dataHold" class="col-sm-1">
-                        <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
-                        <div class="coding one" id="qrcode">
-                            <img src="" id="imgFour">
-                        </div>
-                        <label class="codeLbl" id="fourInfo"></label>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div id="dataHold" class="col-sm-1">
-                        <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
-                        <div class="coding one" id="qrcode">
-                            <img src="" id="imgFour">
-                        </div>
-                        <label class="codeLbl" id="fourInfo"></label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div id="dataHold" class="col-sm-1">
-                        <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
-                        <div class="coding one" id="qrcode">
-                            <img src="" id="imgFour">
-                        </div>
-                        <label class="codeLbl" id="fourInfo"></label>
-                    </div>
-                </div>
             </div>
-            <div id="tableRow" class="row">
-                <div class="col">
-                    <div id="dataHold" class="col-sm-1">
-                        <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
-                        <div class="coding one" id="qrcode">
-                            <img src="" id="imgFour">
-                        </div>
-                        <label class="codeLbl" id="fourInfo"></label>
-                    </div>
-                </div>
+        </div>
+    
+    <div id="tableRow" class="row">
 
-                <div class="col">
-                    <div id="dataHold" class="col-sm-1">
-                        <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
-                        <div class="coding one" id="qrcode">
-                            <img src="" id="imgFour">
-                        </div>
-                        <label class="codeLbl" id="fourInfo"></label>
-                    </div>
+        <div class="col">
+
+            <div id="dataHold" class="col-sm-1">
+
+                <input type="button" onclick="setQR('imgFive', 'fiveInfo');" value="Set QR" />
+
+                <div class="coding one" id="qrcode">
+                    <img src="" id="imgFive">
                 </div>
-                <div class="col">
-                    <div id="dataHold" class="col-sm-1">
-                        <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
-                        <div class="coding one" id="qrcode">
-                            <img src="" id="imgFour">
-                        </div>
-                        <label class="codeLbl" id="fourInfo"></label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div id="dataHold" class="col-sm-1">
-                        <input type="button" onclick="setQR('imgFour', 'fourInfo');" value="Set QR" />
-                        <div class="coding one" id="qrcode">
-                            <img src="" id="imgFour">
-                        </div>
-                        <label class="codeLbl" id="fourInfo"></label>
-                    </div>
-                </div>
+                <label class="codeLbl" id="fiveInfo"></label>
             </div>
         </div>
 
 
-        <script>
 
-            function init() {
-                // Clear forms here
-                document.getElementById("qr-text").value = "";
-            }
-            window.onload = init;
+        <div class="col">
 
+            <div id="dataHold" class="col-sm-1">
 
-            function setQR(setID, labelID) {
-                //var id = setID.toString();
-                var holdIMG = document.getElementById(setID);
-                var mainInfo = document.getElementsByTagName("img")[0];
-                var mainLbl = document.getElementById("labelInfo");
-                var imgs = document.createElement("img");
-                holdIMG.src = mainInfo.src;
-                //     if(holdimg.hasChildNodes()) {
-                //     imgs.setAttribute("class", "mainIMG");
-                //     imgs.src = mainInfo.src;
-                //     holdimg.removeChild()
-                //    }
-                //    else{
-                //     imgs.src = mainInfo.src;
-                //     holdimg.appendChild(imgs);
-                //    }
+                <input type="button" onclick="setQR('imgSix', 'sixInfo');" value="Set QR" />
 
-                var labels = document.getElementById(labelID);
-                labels.innerText = mainLbl.innerText;
-                // Get the target div element
+                <div class="coding one" id="qrcode">
 
-                //codes.innerHTML = "";
-                //codes.value = mainInfo;
-                // Generate QR code using qrcode.js library
-                // var qrcode = new QRCode(codes, {
-                //     text: mainInfo,
-                //     width: 150,
-                //     height: 150
-                // });
+                    <img src="" id="imgSix">
+
+                </div>
 
 
-            }
-            //document.getElementById("genButton").addEventListener("click", generateQRCode);
-            function generateQRCode() {
-                // Get the text from the input field
-                var text = document.getElementById("qr-text").value;
-                var codes = document.getElementsByClassName("coding");
-                var labels = document.getElementsByClassName("codeLbl");
+                <label class="codeLbl" id="sixInfo"></label>
+            </div>
 
-                // Get the label 
-                var lbl = document.getElementById("labelInfo");
+        </div>
 
 
-                // Clear previous QR code if any
-                var code = document.getElementById("qrcodeMain");
-                code.innerHTML = "";
+        <div class="col">
 
-                // Generate QR code using qrcode.js library
-                var qrcode = new QRCode(code, {
-                    text: text,
-                    width: 150,
-                    height: 150
-                });
-                lbl.textContent = text;
-                // for (var i = 0; i < codes.length; i++) {
-                //     var coder = codes[i];
-                //     var lblr = labels[i];
-                //     coder.innerHTML = "";
+            <div id="dataHold" class="col-sm-1">
 
-                //     // Generate QR code using qrcode.js library
-                //     var qrcode = new QRCode(coder, {
-                //         text: text,
-                //         width: 150,
-                //         height: 150
-                //     });
-                //     lblr.textContent = text;
-                // }
-                text = "";
-                // Set label content 
+                <input type="button" onclick="setQR('imgSeven', 'sevenInfo');" value="Set QR" />
 
+                <div class="coding one" id="qrcode">
 
-            }
-        </script>
-        <style>
-            #tableColMain {
-                margin: 0 auto;
-                text-align: center;
-            }
+                    <img src="" id="imgSeven">
 
-            #qrcode {
-                width: 150px;
-                height: 150px;
-                /* Remove border */
-                border: none;
-                background-color: #fff;
-                /* Set white background */
-            }
+                </div>
 
-            #main {
-                background-color: aliceblue;
-                width: 100px;
-                height: 200px;
-            }
+                <label class="codeLbl" id="sevenInfo"></label>
 
-            body {
-                background-color: beige
-            }
+            </div>
 
-            #tableRow {
-                margin-left: 20%;
+        </div>
+        <div class="col">
 
+            <div id="dataHold" class="col-sm-1">
 
-            }
+                <input type="button" onclick="setQR('imgEight', 'eightInfo');" value="Set QR" />
 
-            .printCol {
-                display: inline;
-            }
+                <div class="coding one" id="qrcode">
 
-            #dataHold {
-                justify-content: center;
-            }
+                    <img src="" id="imgEight">
 
-            .coding {
-                text-align: center;
-                margin-left: 10px;
-                margin-right: 10px;
-                margin-top: 20px;
+                </div>
 
-            }
+                <label class="codeLbl" id="eightInfo"></label>
 
-            .codeLbl {
-                margin-bottom: 20px;
-                text-align: center;
-                align-self: center;
-            }
+            </div>
+
+        </div>
+
+    </div>
+    <div id="tableRow" class="row">
+        <div class="col">
+            <div id="dataHold" class="col-sm-1">
+                <input type="button" onclick="setQR('imgNine', 'nineInfo');" value="Set QR" />
+                <div class="coding one" id="qrcode">
+                    <img src="" id="imgNine">
+                </div>
+                <label class="codeLbl" id="nineInfo"></label>
+            </div>
+        </div>
+
+        <div class="col">
+            <div id="dataHold" class="col-sm-1">
+                <input type="button" onclick="setQR('imgTen', 'tenInfo');" value="Set QR" />
+                <div class="coding one" id="qrcode">
+                    <img src="" id="imgTen">
+                </div>
+                <label class="codeLbl" id="tenInfo"></label>
+            </div>
+        </div>
+        <div class="col">
+            <div id="dataHold" class="col-sm-1">
+                <input type="button" onclick="setQR('imgEleven', 'elevenInfo');" value="Set QR" />
+                <div class="coding one" id="qrcode">
+                    <img src="" id="imgEleven">
+                </div>
+                <label class="codeLbl" id="elevenInfo"></label>
+            </div>
+        </div>
+        <div class="col">
+            <div id="dataHold" class="col-sm-1">
+                <input type="button" onclick="setQR('imgTwelve', 'twelveInfo');" value="Set QR" />
+                <div class="coding one" id="qrcode">
+                    <img src="" id="imgTwelve">
+                </div>
+                <label class="codeLbl" id="twelveInfo"></label>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-            @media print {
-                #main {
-                    visibility: hidden;
-                }
-
-                #qrcode {
-                    visibility: visible;
-                    top: 0;
-                }
-
-                input {
-                    visibility: hidden;
-                }
-
-                header {
-                    visibility: hidden;
-                }
-
-                #topHeader {
-                    visibility: hidden;
-                    display: none;
-                }
-
-                /* .div2 * { visibility: visible; } */
-                /* .div2 { position: absolute; top: 40px; left: 30px; } */
-                #tableRow {
-                    /* Target the content you want to print */
-                    display: inline-block;
-                    /* Ensure visibility during printing */
-                    margin: 1px;
-                    padding: 1px;
-
-                }
-
-
-            }
-        </style>
 </body>
 
 </html>
