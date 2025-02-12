@@ -4,7 +4,6 @@ function init() {
 }
 
 
-
 function setQR(setID, labelID) {
 	//var id = setID.toString();
 	var holdIMG = document.getElementById(setID);
@@ -12,28 +11,11 @@ function setQR(setID, labelID) {
 	var mainLbl = document.getElementById("labelInfo");
 	var imgs = document.createElement("img");
 	holdIMG.src = mainInfo.src;
-	//     if(holdimg.hasChildNodes()) {
-	//     imgs.setAttribute("class", "mainIMG");
-	//     imgs.src = mainInfo.src;
-	//     holdimg.removeChild()
-	//    }
-	//    else{
-	//     imgs.src = mainInfo.src;
-	//     holdimg.appendChild(imgs);
-	//    }
+
 
 	var labels = document.getElementById(labelID);
 	labels.innerText = mainLbl.innerText;
-	// Get the target div element
 
-	//codes.innerHTML = "";
-	//codes.value = mainInfo;
-	// Generate QR code using qrcode.js library
-	// var qrcode = new QRCode(codes, {
-	//     text: mainInfo,
-	//     width: 150,
-	//     height: 150
-	// });
 
 
 }
@@ -43,6 +25,16 @@ function generateQRCode() {
 	var text = document.getElementById("qr-text").value;
 	var codes = document.getElementsByClassName("coding");
 	var labels = document.getElementsByClassName("codeLbl");
+
+	//Variable for the machine number
+	let machineName = text.substring(0,text.indexOf(";"));
+
+	//Variable for the model number
+	let modelNumber = text.substring(text.indexOf(";")+1, text.indexOf(":"));
+
+	//variable for the department number.
+	let deptNumber = text.substring(text.indexOf("#")+1, text.length-2);
+	//WASINO;LG-7M:#3-3
 
 	// Get the label 
 	var lbl = document.getElementById("labelInfo");
@@ -58,20 +50,8 @@ function generateQRCode() {
 		width: 75,
 		height: 75
 	});
-	lbl.textContent = text;
-	// for (var i = 0; i < codes.length; i++) {
-	//     var coder = codes[i];
-	//     var lblr = labels[i];
-	//     coder.innerHTML = "";
+	lbl.textContent = machineName + " - " + modelNumber + " - Dept# " + deptNumber;
 
-	//     // Generate QR code using qrcode.js library
-	//     var qrcode = new QRCode(coder, {
-	//         text: text,
-	//         width: 150,
-	//         height: 150
-	//     });
-	//     lblr.textContent = text;
-	// }
 	text = "";
 	// Set label content 
 
