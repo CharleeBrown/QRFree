@@ -20,9 +20,35 @@ function setQR(setID, labelID) {
 function generateQRCode() {
 	// Get the text from the input field
 	var text = document.getElementById("qr-text").value;
+
+	//Variable for all the subsequent qr code fields
 	var codes = document.getElementsByClassName("coding");
+
+	//Variable for all the subsequent qr code labels
 	var labels = document.getElementsByClassName("codeLbl");
 
+	//Variable for the primary qr code
+	var code = document.getElementById("qrcodeMain");
+
+	// Set a variable for the primary qr code label
+	var lbl = document.getElementById("labelInfo");
+
+	
+	// Clear previous QR code if any
+	code.innerHTML = "";
+
+
+		// Generate QR code using qrcode.js library
+	var qrcode = new QRCode(code, {
+		text: text,
+		width: 75,
+		height: 75
+	});
+
+	// Set label content 
+	lbl.textContent = text;
+	
+	text = "";
 	//*
 	//Variable for the machine number
 	//let machineName = text.substring(0, text.indexOf(";"));
@@ -34,22 +60,9 @@ function generateQRCode() {
 	//let deptNumber = text.substring(text.indexOf("#") + 1, text.length - 2);
 	//WASINO;LG-7M:#3-3
 	
-	// Get the label 
-	//var lbl = document.getElementById("labelInfo");
 
 
-	// Clear previous QR code if any
-	var code = document.getElementById("qrcodeMain");
-	code.innerHTML = "";
 
-	// Generate QR code using qrcode.js library
-	var qrcode = new QRCode(code, {
-		text: text,
-		width: 75,
-		height: 75
-	});
-	lbl.textContent == text;
 
-	text = "";
-	// Set label content 
+	
 }
