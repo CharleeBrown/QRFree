@@ -23,18 +23,19 @@ function generateQRCode() {
 	var codes = document.getElementsByClassName("coding");
 	var labels = document.getElementsByClassName("codeLbl");
 
+	//*
 	//Variable for the machine number
-	let machineName = text.substring(0, text.indexOf(";"));
+	//let machineName = text.substring(0, text.indexOf(";"));
 
 	//Variable for the model number
-	let modelNumber = text.substring(text.indexOf(";") + 1, text.indexOf(":"));
+	//let modelNumber = text.substring(text.indexOf(";") + 1, text.indexOf(":"));
 
 	//variable for the department number.
-	let deptNumber = text.substring(text.indexOf("#") + 1, text.length - 2);
+	//let deptNumber = text.substring(text.indexOf("#") + 1, text.length - 2);
 	//WASINO;LG-7M:#3-3
-
+	
 	// Get the label 
-	var lbl = document.getElementById("labelInfo");
+	//var lbl = document.getElementById("labelInfo");
 
 
 	// Clear previous QR code if any
@@ -47,7 +48,7 @@ function generateQRCode() {
 		width: 75,
 		height: 75
 	});
-	lbl.textContent = text;
+	lbl.textContent == text;
 
 	text = "";
 	// Set label content 
