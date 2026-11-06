@@ -47,7 +47,7 @@ function generateQRCode() {
 		width: 75,
 		height: 75
 	});
-	lbl.textContent = machineName + " - " + modelNumber + " - Dept# " + deptNumber;
+	lbl.textContent = text;
 
 	text = "";
 	// Set label content 
